@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo 'usage: update symlinks for nginx servers'
+
+for file in servers/*; do
+  # echo ln -sfv $PWD/servers/$file `brew --prefix`/etc/nginx/servers
+  ln -sfv $PWD/$file `brew --prefix`/etc/nginx/servers
+done
