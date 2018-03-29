@@ -1,8 +1,8 @@
-# Mocking Lot
+# Ports Keeper
 
-Hence, we can find mockings asap~
+Hence, we can find port mapped services easily~
 
-# Stack
+# Stacks
 
   - [dnsmasq](#dnsmasq)
   - [nginx](#nginx)
@@ -23,6 +23,20 @@ Hence, we can find mockings asap~
 
 * start service with sudo priviledges (port 80 requires permissions)
 
+# Usage
+
+## Add TLD
+
+    * step 1: add `nameserver 127.0.0.1` in `/etc/resolver/[tld]`
+    * step 2: add/update `adress=/[tld]/127.0.0.1` in `conf/dnsmasq`
+    * step 3: add/update upstream blocks in `servers/[tld]`
+    * step 4: restart nginx
+
+## Add sub domain
+
+    * step 1: add/update upstream blocks in `servers/[tld]`
+    * step 2: restart nginx
+
 # Ref
 
 - https://gist.github.com/brandonblack/ee81745569ae98306555f108bf69ff5c
@@ -37,5 +51,5 @@ dnsmasq: stable 2.79 (bottled)
 
 ### Alternatives
 
-- POW
+- [POW](http://pow.cx/manual.html)
 
