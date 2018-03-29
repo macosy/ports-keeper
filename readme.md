@@ -40,6 +40,9 @@ then edit relevant configs in `conf`
     * step 1: add/update upstream blocks in `servers/[tld]`
     * step 2: restart nginx
 
+Note: ensure newly added services only expose to localhost interface as a good
+practice.
+
 # Ref
 
 - https://gist.github.com/brandonblack/ee81745569ae98306555f108bf69ff5c
