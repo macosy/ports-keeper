@@ -47,6 +47,14 @@ practice.
 
 - https://gist.github.com/brandonblack/ee81745569ae98306555f108bf69ff5c
 
+## Ports checking
+
+- Get all using ports that expose to localhost
+`sudo lsof -i -n -P | grep 'TCP 127.0.0.1'`
+
+- Get all using ports that expose to all interface
+`sudo lsof -i -n -P | grep 'TCP *'`
+
 ## Versions
 
 ```
