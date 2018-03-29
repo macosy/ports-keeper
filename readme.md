@@ -1,6 +1,6 @@
 # Ports Keeper
 
-Hence, we can find port mapped services easily~
+Hence, we can find port mapped services easily ~ :100:
 
 # Stacks
 
@@ -12,6 +12,8 @@ Hence, we can find port mapped services easily~
 ```
   brew install dnsmasq nginx
 ```
+
+then edit relevant configs in `conf`
 
 ## dnsmasq
 
@@ -28,9 +30,10 @@ Hence, we can find port mapped services easily~
 ## Add TLD
 
     * step 1: add `nameserver 127.0.0.1` in `/etc/resolver/[tld]`
-    * step 2: add/update `adress=/[tld]/127.0.0.1` in `conf/dnsmasq`
+    * step 2: add/update `address=/[tld]/127.0.0.1` in `conf/dnsmasq`
     * step 3: add/update upstream blocks in `servers/[tld]`
-    * step 4: restart nginx
+    * step 4: ./sync 
+    * step 5: restart nginx
 
 ## Add sub domain
 
